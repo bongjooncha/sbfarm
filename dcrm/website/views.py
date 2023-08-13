@@ -30,6 +30,3 @@ def logout_user(request):
     logout(request)
     messages.success(request, "로그아웃 완료")
     return redirect('home')
-
-def dfman(request):
-    return render(request, 'sfman.html',{})

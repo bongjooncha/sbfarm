@@ -3,36 +3,38 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+    <p></p>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <a style="float: right; font-size:20px; display:block;">수위1
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">확인</button>
+          </a>
 
-    <h1>스마트팜 조작버튼</h1>
-    <table class="table table-dark table-striped table-bordered">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">created time</th>
-            <th scope="col">Name</th>
-            <th scope="col">email</th>
-            <th scope="col">phone</th>
-          </tr>
-        </thead>
-    {% if records %}
-        {% for record in records %}
-        <tbody>
-          <tr>
-            <td>{{record.id}}</td>
-            <td>{{record.created_at}}</td>
-            <td>{{ record.first_name }}{{ record.last_name }}</td>
-            <td>{{ record.email }}</td>
-            <td>{{ record.phone }}</td>
-          </tr>
-        </tbody>
-        {% endfor %}
-    {% endif %}
-      </table>
+          <a style="float: right; display: block;">수위2
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">확인</button>
+          </a>
+        </form>
+      </div>
+    </nav>
+
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+      
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+      <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+    </div>
 
 {% else %}
 
-    <h1></h1>
+    <h1>This is personal TRY website</h1>
 
 {% endif %}
 

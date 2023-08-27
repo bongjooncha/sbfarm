@@ -30,3 +30,6 @@ def logout_user(request):
     logout(request)
     messages.success(request, "로그아웃 완료")
     return redirect('home')
+
+def guest(request):
+    return redirect("d.html")

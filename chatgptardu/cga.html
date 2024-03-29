@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arduino Control</title>
+</head>
+<body>
+  <button id="getWaterLevelBtn">Get Water Level</button>
+  <input type="text" id="waterLevelInput" readonly>
+  
+  <script>
+    const getWaterLevelBtn = document.getElementById("getWaterLevelBtn");
+    const waterLevelInput = document.getElementById("waterLevelInput");
+
+    getWaterLevelBtn.addEventListener("click", async () => {
+      const response = await fetch("/getWaterLevel");
+      const data = await response.json();
+      waterLevelInput.value = data.waterLevel;
+    });
+  </script>
+</body>
+</html>
